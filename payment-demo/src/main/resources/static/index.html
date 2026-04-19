@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ödeme Entegrasyonu Demo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h1>Ödeme Entegrasyonu</h1>
+
+    <label for="customerName">Müşteri Adı</label>
+    <input type="text" id="customerName" placeholder="Örn: Ali Yılmaz">
+
+    <label for="amount">Tutar</label>
+    <input type="number" id="amount" placeholder="Örn: 250" min="1" step="0.01">
+
+    <label for="method">Ödeme Yöntemi</label>
+    <select id="method">
+      <option value="">Yükleniyor...</option>
+    </select>
+
+    <button id="payBtn">Ödeme Yap</button>
+
+    <div id="result" class="result hidden"></div>
+  </div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>
