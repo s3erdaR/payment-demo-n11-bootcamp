@@ -18,8 +18,10 @@ public class PaymentService {
     }
 
     public PaymentResponse processPayment(PaymentRequest request) {
-        PaymentMethod paymentMethod = paymentMethodFactory.getPaymentMethod(request.getMethod());
-        return paymentMethod.pay(request);
+        return (PaymentResponse) paymentMethodFactory.invokePayWithReflection(
+                request.getMethod(),
+                request
+        );
     }
 
     public List<String> getSupportedMethods() {
